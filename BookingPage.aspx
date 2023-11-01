@@ -1,9 +1,12 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.Master" AutoEventWireup="true" CodeBehind="BookingPage.aspx.cs" Inherits="MoviePlex.BookingPage" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <link rel="stylesheet" type="text/css" href="StyleSheet/Booking.css" />
-    <img ID="banner"src="Images/Booking/booking.jpg" alt="booking">
+    <img ID="banner" src="Images/Booking/booking.jpg" alt="booking">
     <div class="booking-details">
         
+        <!-- Display a calendar control on top -->
+        <asp:Calendar ID="calendar" runat="server" OnDayRender="calendar_DayRender"></asp:Calendar>
+
         <h1>Booking Details</h1>
         
         <!-- Display available theaters -->

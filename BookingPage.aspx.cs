@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace MoviePlex
 {
@@ -55,6 +56,18 @@ namespace MoviePlex
                 }
             }
         }
+        protected void calendar_DayRender(object sender, DayRenderEventArgs e)
+        {
+            // Example: Disable past dates
+            if (e.Day.Date < DateTime.Today)
+            {
+                e.Day.IsSelectable = false;
+                e.Cell.ForeColor = System.Drawing.Color.Gray;
+            }
+
+            // You can add more custom logic here to style or disable specific dates.
+        }
+
 
         protected void BtnConfirmBooking_Click(object sender, EventArgs e)
         {
@@ -63,7 +76,7 @@ namespace MoviePlex
             string selectedShowTiming = ddlShowTimings.SelectedValue;
 
             // Redirect to a confirmation page or perform other booking-related actions
-            Response.Redirect($"ConfirmationPage.aspx?theaterId={selectedTheaterId}&showTiming={selectedShowTiming}");
+            Response.Redirect($"SeatSelect.aspx?theaterId={selectedTheaterId}&showTiming={selectedShowTiming}");
         }
     }
 }

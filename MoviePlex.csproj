@@ -102,11 +102,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="AdminDashboard.aspx" />
+    <Content Include="AdminLogin.aspx" />
     <Content Include="App_Data\MoviePlex.mdf" />
     <Content Include="App_Data\MoviePlex_log.ldf">
       <DependentUpon>MoviePlex.mdf</DependentUpon>
     </Content>
     <Content Include="BookingPage.aspx" />
+    <Content Include="career.aspx" />
+    <Content Include="CartPage.aspx" />
+    <Content Include="CheckoutPage.aspx" />
+    <Content Include="ConfirmationPage.aspx" />
+    <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -125,12 +132,18 @@
     <Content Include="Content\bootstrap.rtl.min.css" />
     <Content Include="Content\Site.css" />
     <Content Include="favicon.ico" />
+    <Content Include="FoodDrinks.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Home.aspx" />
     <Content Include="Images\Background\userBack.jpg" />
     <Content Include="Images\banner\Banner1.jpg" />
     <Content Include="Images\banner\Banner2.jpg" />
     <Content Include="Images\Booking\booking.jpg" />
+    <Content Include="Images\FoodDrinks\Candy.jpg" />
+    <Content Include="Images\FoodDrinks\HotDog.jpg" />
+    <Content Include="Images\FoodDrinks\Nachos.jpg" />
+    <Content Include="Images\FoodDrinks\Pizza.jpg" />
+    <Content Include="Images\FoodDrinks\PopCorn.jpg" />
     <Content Include="Images\homepage\3d.jpg" />
     <Content Include="Images\homepage\recliner.jpg" />
     <Content Include="Images\homepage\screen.jpg" />
@@ -150,6 +163,7 @@
     <Content Include="Loginpage.aspx" />
     <Content Include="MovieDetails.aspx" />
     <Content Include="Movies.aspx" />
+    <Content Include="New.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.esm.js" />
@@ -179,11 +193,12 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="MasterPage.Master" />
+    <Content Include="SeatSelect.aspx" />
     <Content Include="StyleSheet\Booking.css" />
+    <Content Include="StyleSheet\Food.css" />
     <Content Include="StyleSheet\Moviedetails.css" />
     <Content Include="StyleSheet\UserProfile.css" />
     <Content Include="UserProfile.aspx" />
-    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -220,6 +235,20 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminDashboard.aspx.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminDashboard.aspx.designer.cs">
+      <DependentUpon>AdminDashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AdminLogin.aspx.designer.cs">
+      <DependentUpon>AdminLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="BookingPage.aspx.cs">
@@ -228,6 +257,48 @@
     </Compile>
     <Compile Include="BookingPage.aspx.designer.cs">
       <DependentUpon>BookingPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="career.aspx.cs">
+      <DependentUpon>career.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="career.aspx.designer.cs">
+      <DependentUpon>career.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CartPage.aspx.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CartPage.aspx.designer.cs">
+      <DependentUpon>CartPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CheckoutPage.aspx.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CheckoutPage.aspx.designer.cs">
+      <DependentUpon>CheckoutPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ConfirmationPage.aspx.cs">
+      <DependentUpon>ConfirmationPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ConfirmationPage.aspx.designer.cs">
+      <DependentUpon>ConfirmationPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FoodDrinks.aspx.cs">
+      <DependentUpon>FoodDrinks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FoodDrinks.aspx.designer.cs">
+      <DependentUpon>FoodDrinks.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -267,7 +338,21 @@
     <Compile Include="Movies.aspx.designer.cs">
       <DependentUpon>Movies.aspx</DependentUpon>
     </Compile>
+    <Compile Include="New.aspx.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="New.aspx.designer.cs">
+      <DependentUpon>New.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeatSelect.aspx.cs">
+      <DependentUpon>SeatSelect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SeatSelect.aspx.designer.cs">
+      <DependentUpon>SeatSelect.aspx</DependentUpon>
+    </Compile>
     <Compile Include="UserProfile.aspx.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -281,13 +366,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="WebForm1.aspx.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="WebForm1.aspx.designer.cs">
-      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

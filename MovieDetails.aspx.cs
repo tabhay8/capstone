@@ -2,6 +2,7 @@
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
+using System.Web.UI.WebControls;
 
 namespace MoviePlex
 {
@@ -49,6 +50,9 @@ namespace MoviePlex
 
                     // Store the movieId in a session variable for later use on the BookingPage
                     Session["SelectedMovieId"] = movieId;
+
+                    // Load average rating and recent reviews
+                    LoadAverageRatingAndReviews(movieId);
                 }
             }
         }
@@ -57,6 +61,52 @@ namespace MoviePlex
         {
             // Redirect to the BookingPage
             Response.Redirect("Loginpage.aspx");
+        }
+
+        protected void BtnSubmitReview_Click(object sender, EventArgs e)
+        {
+            if (Session["SelectedMovieId"] != null)
+            {
+                int movieId = Convert.ToInt32(Session["SelectedMovieId"]);
+                string reviewComment = txtReviewComment.Text;
+                int rating = Convert.ToInt32(ddlRating.SelectedValue);
+
+                // Define your database connection string
+                string connectionString = ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString;
+
+                // Create a SQL Connection and SQL Command to insert the review into the database
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+
+                    string insertReviewQuery = "INSERT INTO Reviews (movie_id, UserID, Rating, Comment, ReviewDate) " +
+                                                "VALUES (@movie_id, @userId, @rating, @comment, @reviewDate)";
+
+                    using (SqlCommand insertReviewCommand = new SqlCommand(insertReviewQuery, connection))
+                    {
+                        insertReviewCommand.Parameters.AddWithValue("@movie_id", movieId);
+                        // You need to set the UserID (the user who submits the review)
+                        insertReviewCommand.Parameters.AddWithValue("@userId", 1); // Replace with the actual user ID.
+                        insertReviewCommand.Parameters.AddWithValue("@rating", rating);
+                        insertReviewCommand.Parameters.AddWithValue("@comment", reviewComment);
+                        insertReviewCommand.Parameters.AddWithValue("@reviewDate", DateTime.Now);
+
+                        insertReviewCommand.ExecuteNonQuery();
+                    }
+                }
+
+                // Clear the input fields after submission
+                txtReviewComment.Text = "";
+                ddlRating.SelectedIndex = 0;
+
+                // Reload the reviews after submission
+                LoadAverageRatingAndReviews(movieId);
+            }
+        }
+
+        protected void LoadAverageRatingAndReviews(int movieId)
+        {
+            // ... (The code for loading average rating and recent reviews, as previously provided)
         }
     }
 }

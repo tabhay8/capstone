@@ -16,8 +16,8 @@
                 <div class="nav">
                     <a href="Home.aspx">Home</a>
                     <a href="Movies.aspx">Movies</a>
-                    <a href="#">Food and drinks</a>
-                    <a href="#">Contact</a>
+                    <a href="FoodDrinks.aspx">Food and drinks</a>
+                    <a href="Contact.aspx">Contact</a>
                 </div>
                 
             </div>
@@ -31,13 +31,13 @@
         </div>
         <div class="footer">
             <div class="footer-column">
-                Usefull links
+                <a href="Career.aspx">Careers</a>
             </div>
             <div class="footer-column">
                 Whats new?
             </div>
             <div class="footer-column">
-                More at Movieplex
+                 <a href="New.aspx">Upcoming movies </a>
             </div>
         </div>
     </form>
