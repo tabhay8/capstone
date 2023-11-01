@@ -1,0 +1,24 @@
+﻿/* Apply these styles to the movie-details container */
+.movie-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Style for the columns */
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+/* Style for the movie poster */
+.movie-poster {
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* Style for the button to book a show */
+.book-show-button {
+    width: 100%;
+    text-align: center;
+}

@@ -1,0 +1,121 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.header {
+    background-color: #152238;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav {
+    background-color: #444;
+    padding: 10px;
+    text-align: center;
+}
+
+    .nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+
+.search {
+    background-color: #666;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    background-color: darkslategrey;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.logo {
+    text-align: center;
+}
+
+    .logo img {
+        max-width: 150px; 
+        height: auto;
+    }
+
+/* Style for the search bar */
+.search {
+    background-color: #666;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+    .search input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .search button[type="submit"] {
+        background-color: #444;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        margin-left: 10px;
+        cursor: pointer;
+    }
+
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.mySlides {
+    display: none;
+    width: 100%;
+}
+
+img {
+    width: 100%;
+}
+@media screen and (max-width: 768px) {
+    .header {
+        padding: 5px;
+    }
+
+    .nav a {
+        display: block;
+        margin: 5px;
+    }
+}
+
+/* Tablet View */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .header {
+        padding: 10px;
+    }
+
+    .nav a {
+        display: inline-block;
+        margin: 0 10px;
+    }
+}

@@ -1,0 +1,76 @@
+﻿/* Common styles for all views */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.banner-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner-slider {
+    display: flex;
+    transition: transform 0.8s ease-in-out;
+}
+
+.banner-slide {
+    flex: 0 0 100%;
+}
+
+.column-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.column {
+    flex: 1;
+    text-align: center;
+    position: relative;
+}
+
+    .column img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .column p {
+        font-size: 16px;
+        margin: 10px 0;
+        text-align: center;
+        color: #333;
+        line-height: 1.4;
+    }
+
+/* Media queries for mobile view */
+@media screen and (max-width: 768px) {
+    .column-container {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
+
+/* Media queries for tablet view */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .column-container {
+        flex-direction: column;
+    }
+
+    .column {
+        margin-bottom: 20px;
+    }
+}
