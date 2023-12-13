@@ -78,24 +78,6 @@ namespace MoviePlex
         protected global::System.Web.UI.WebControls.Label lblDirector;
 
         /// <summary>
-        /// lblAverageRating control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAverageRating;
-
-        /// <summary>
-        /// allReviewsRepeater control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater allReviewsRepeater;
-
-        /// <summary>
         /// btnBookShow control.
         /// </summary>
         /// <remarks>
@@ -103,32 +85,5 @@ namespace MoviePlex
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnBookShow;
-
-        /// <summary>
-        /// txtReviewComment control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtReviewComment;
-
-        /// <summary>
-        /// ddlRating control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlRating;
-
-        /// <summary>
-        /// btnSubmitReview control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSubmitReview;
     }
 }

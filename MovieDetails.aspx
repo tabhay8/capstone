@@ -13,41 +13,10 @@
             <p>Genre: <asp:Label ID="lblGenre" runat="server"></asp:Label></p>
             <p>Release Date: <asp:Label ID="lblReleaseDate" runat="server"></asp:Label></p>
             <p>Director: <asp:Label ID="lblDirector" runat="server"></asp:Label></p>
-            
-            <!-- Display Average Rating -->
-            <p><asp:Label ID="lblAverageRating" runat="server"></asp:Label></p>
-            
-            
-            <asp:Repeater ID="allReviewsRepeater" runat="server">
-    <HeaderTemplate>
-        <h2>All Reviews</h2>
-        <ul>
-    </HeaderTemplate>
-    <ItemTemplate>
-        <li>
-            <p>Rating: <asp:Label ID="lblAllReviewRating" runat="server" Text='<%# Eval("Rating") %>'></asp:Label></p>
-            <p>Comment: <asp:Label ID="lblAllReviewComment" runat="server" Text='<%# Eval("Comment") %>'></asp:Label></p>
-            <p>Posted by: <asp:Label ID="lblAllReviewUserName" runat="server" Text='<%# Eval("UserName") %>'></asp:Label></p>
-        </li>
-    </ItemTemplate>
-    <FooterTemplate>
-        </ul>
-    </FooterTemplate>
-</asp:Repeater>
-
         </div>
         <div class="column">
+           
             <asp:Button ID="btnBookShow" runat="server" Text="Book a Show" OnClick="BtnBookShow_Click" CssClass="book-show-button" />
-            <h2>Write a Review</h2>
-            <asp:TextBox ID="txtReviewComment" runat="server" placeholder="Write your review" TextMode="MultiLine"></asp:TextBox>
-            <asp:DropDownList ID="ddlRating" runat="server">
-                <asp:ListItem Text="1" Value="1" />
-                <asp:ListItem Text="2" Value="2" />
-                <asp:ListItem Text="3" Value="3" />
-                <asp:ListItem Text="4" Value="4" />
-                <asp:ListItem Text="5" Value="5" />
-            </asp:DropDownList>
-            <asp:Button ID="btnSubmitReview" runat="server" Text="Submit Review" OnClick="BtnSubmitReview_Click" />
         </div>
     </div>
 </asp:Content>

@@ -13,7 +13,6 @@
         </div>
        
     </div>
-    
     <div class="column-container">
         <div class="column">
             <img src="Images/homepage/screen.jpg" alt="Wide Theatre Screen">

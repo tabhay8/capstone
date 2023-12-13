@@ -6,9 +6,6 @@
 <head runat="server">
     <title>Movie Plex</title>
     <link rel="stylesheet" type="text/css" href="stylesheet/stylesheet.css">
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" />
-
 </head>
 <body>
     <form id="form1" runat="server">
@@ -19,9 +16,8 @@
                 <div class="nav">
                     <a href="Home.aspx">Home</a>
                     <a href="Movies.aspx">Movies</a>
-                    <a href="FoodDrinks.aspx">Food and drinks</a>
-                    <a href="Contact.aspx">Contact</a>
-                    <a href="AdminLogin.aspx">Login as Admin</a>
+                    <a href="#">Food and drinks</a>
+                    <a href="#">Contact</a>
                 </div>
                 
             </div>
@@ -35,18 +31,15 @@
         </div>
         <div class="footer">
             <div class="footer-column">
-                <a href="Career.aspx">Careers</a>
+                Usefull links
             </div>
             <div class="footer-column">
                 Whats new?
             </div>
             <div class="footer-column">
-                 <a href="New.aspx">Upcoming movies </a>
+                More at Movieplex
             </div>
         </div>
     </form>
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

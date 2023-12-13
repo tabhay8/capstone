@@ -24,15 +24,6 @@ namespace MoviePlex
         protected global::System.Web.UI.WebControls.TextBox txtSearch;
 
         /// <summary>
-        /// ddlGenres control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlGenres;
-
-        /// <summary>
         /// btnSearch control.
         /// </summary>
         /// <remarks>
@@ -57,7 +48,7 @@ namespace MoviePlex
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage notFound;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl notFound;
 
         /// <summary>
         /// MovieRepeater control.

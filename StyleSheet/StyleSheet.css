@@ -29,10 +29,6 @@
         margin: 0 10px;
     }
 
-.footer {
-    text-decoration: none;
-}
-
 .search {
     background-color: #666;
     padding: 10px;
@@ -50,7 +46,6 @@
 .footer-column {
     flex: 1;
     padding: 10px;
-    text-decoration:none;
 }
 
 .logo {
@@ -102,7 +97,6 @@
 img {
     width: 100%;
 }
-
 @media screen and (max-width: 768px) {
     .header {
         padding: 5px;

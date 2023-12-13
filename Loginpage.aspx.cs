@@ -135,8 +135,6 @@ namespace MoviePlex
         }
         protected void SignIn_Click(object sender, EventArgs e)
         {
-
-
             string signInIdentifier = SignInIdentifier.Text; // This can be either username or email
             string password = SignInPassword.Text;
 
@@ -145,18 +143,17 @@ namespace MoviePlex
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 connection.Open();
-                string selectQuery = "SELECT Username, Password FROM Users WHERE (Username = @SignInIdentifier OR Email = @SignInIdentifier)";
+                string selectQuery = "SELECT Password FROM Users WHERE (Username = @SignInIdentifier OR Email = @SignInIdentifier)";
                 using (SqlCommand command = new SqlCommand(selectQuery, connection))
                 {
                     command.Parameters.AddWithValue("@SignInIdentifier", signInIdentifier);
 
-                    // Retrieve the hashed password and username from the database
+                    // Retrieve the hashed password from the database
+                    string hashedPasswordFromDatabase = command.ExecuteScalar() as string;
                     SqlDataReader reader = command.ExecuteReader();
-                    if (reader.Read())
+                    if (hashedPasswordFromDatabase != null)
                     {
-                        string hashedPasswordFromDatabase = reader["Password"].ToString();
-                        string username = reader["Username"].ToString();
-
+                       
                         // Hash the provided password for comparison
                         string hashedPasswordToCheck = HashPassword(password);
 
@@ -164,12 +161,10 @@ namespace MoviePlex
                         if (hashedPasswordToCheck == hashedPasswordFromDatabase)
                         {
                             // Successful login
-                            // Store the username in a session
-                            Session["Username"] = username;
-
-                            // You can redirect to the user's profile or dashboard.
+                            // You can set a session or cookie to remember the user and redirect to their profile or dashboard.
                             Response.Write("Successful login.");
                             Response.Redirect("BookingPage.aspx");
+
                         }
                         else
                         {
@@ -186,7 +181,6 @@ namespace MoviePlex
                 }
             }
         }
-
 
     }
 }

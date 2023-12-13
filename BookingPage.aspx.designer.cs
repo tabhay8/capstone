@@ -15,15 +15,6 @@ namespace MoviePlex
     {
 
         /// <summary>
-        /// calendar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Calendar calendar;
-
-        /// <summary>
         /// ddlTheaters control.
         /// </summary>
         /// <remarks>
@@ -31,15 +22,6 @@ namespace MoviePlex
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlTheaters;
-
-        /// <summary>
-        /// ddlAuditorium control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAuditorium;
 
         /// <summary>
         /// ddlShowTimings control.
